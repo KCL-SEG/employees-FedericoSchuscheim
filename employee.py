@@ -21,7 +21,7 @@ class EmployeeHourly(Employee):
         return self.hourlyRate * self.hours
     
     def __str__(self):
-        return f'{self.name} works on a contract of {self.hours} hours at {self.hourlyRate}/hour. Their total pay is {self.get_pay()}'
+        return f'{self.name} works on a contract of {self.hours} hours at {self.hourlyRate}/hour. Their total pay is {self.get_pay()}.'
     
 class EmployeeMonthly(Employee):
     def __init__(self, name, salary):
@@ -32,7 +32,7 @@ class EmployeeMonthly(Employee):
         return self.monthlySalary
     
     def __str__(self):
-        return f'{self.name} works on a monthly salary of {self.monthlySalary}. Their total pay is {self.get_pay()}'
+        return f'{self.name} works on a monthly salary of {self.monthlySalary}. Their total pay is {self.get_pay()}.'
 
 class EmployeeMonthlyWithContractCommission(EmployeeMonthly):
     def __init__(self, name, salary, commissionRate, commissions):
@@ -44,7 +44,7 @@ class EmployeeMonthlyWithContractCommission(EmployeeMonthly):
         return super().get_pay() + (self.commissionContracts * self.commissionRate)
     
     def __str__(self):
-        return f'{self.name} works on a monthly salary of {self.monthlySalary} and receives a commission for {self.commissionContracts} contract(s) at {self.commissionRate}/contract. Their total pay is {self.get_pay()}'
+        return f'{self.name} works on a monthly salary of {self.monthlySalary} and receives a commission for {self.commissionContracts} contract(s) at {self.commissionRate}/contract. Their total pay is {self.get_pay()}.'
 
 class EmployeeMonthlyWithBonusCommission(EmployeeMonthly):
     def __init__(self, name, salary, bonus):
@@ -55,7 +55,7 @@ class EmployeeMonthlyWithBonusCommission(EmployeeMonthly):
         return super().get_pay() + self.bonusCommission
     
     def __str__(self):
-        return f'{self.name} works on a monthly salary of {self.monthlySalary} and receives a bonus commission of {self.bonusCommission}. Their total pay is {self.get_pay()}'
+        return f'{self.name} works on a monthly salary of {self.monthlySalary} and receives a bonus commission of {self.bonusCommission}. Their total pay is {self.get_pay()}.'
 
 class EmployeeHourlyWithContractCommission(EmployeeHourly):
     def __init__(self, name, hourlyRate, hours, commissionRate, commissions):
@@ -67,7 +67,7 @@ class EmployeeHourlyWithContractCommission(EmployeeHourly):
         return super().get_pay() + (self.commissionContracts * self.commissionRate)
     
     def __str__(self):
-        return f'{self.name} works on a contract of {self.hours} hours at {self.hourlyRate}/hour and receives a commission for {self.commissionContracts} contract(s) at {self.commissionRate}/contract. Their total pay is {self.get_pay()}'
+        return f'{self.name} works on a contract of {self.hours} hours at {self.hourlyRate}/hour and receives a commission for {self.commissionContracts} contract(s) at {self.commissionRate}/contract. Their total pay is {self.get_pay()}.'
 
 class EmployeeHourlyWithBonusCommission(EmployeeHourly):
     def __init__(self, name, hourlyRate, hours, bonus):
@@ -78,7 +78,7 @@ class EmployeeHourlyWithBonusCommission(EmployeeHourly):
         return super().get_pay() + self.bonusCommission
     
     def __str__(self):
-        return f'{self.name} works on a contract of {self.hours} at {self.hourlyRate}/hour and receives a bonus commission of {self.bonusCommission}. Their total pay is {self.get_pay()}'
+        return f'{self.name} works on a contract of {self.hours} hours at {self.hourlyRate}/hour and receives a bonus commission of {self.bonusCommission}. Their total pay is {self.get_pay()}.'
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
